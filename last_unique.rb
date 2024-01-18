@@ -15,7 +15,19 @@ def last_unique(numbers)
 
   numbers = counts.select { |k, v| v == 1 }.keys
   puts numbers.last
+
+  ## optimized
+  # unique_numbers = []
+  # counts = Hash.new(0)
+  # numbers.reverse_each do |n|
+  #   counts[n] += 1
+  #   unique_numbers << n if counts[n] == 1
+  # end
+
+  # unique_numbers.last
+  
 end
+
 
 puts last_unique [3,2,1]
 puts last_unique [3,1,2,1]
