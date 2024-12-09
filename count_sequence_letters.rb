@@ -1,4 +1,16 @@
-#aaabbcaddcxx -> 3a2b1c1a2d1c2x
+# Write a method that takes a string as input and returns a new string that represents the run-length encoding of the input string. The output string should include each character followed by the number of times it appears consecutively in the input.
+
+#Input:
+#A string containing only lowercase letters.
+#Example: "aaabbcaddcxx"
+
+#Output:
+#A string representing the run-length encoding of the #input.
+#Example: "3a2b1c1a2d1c2x"
+
+#Constraints:
+# 1. The input string will contain at least one character.
+# 2. Characters are case-sensitive (although only lowercase #letters are used here).
 
 def count_letters(string)
   grouped = Hash.new(0) # { key: value }
@@ -16,8 +28,6 @@ def count_letters(string)
 
  grouped.each{|key, value| puts "#{key[0]} - #{value}" }
 end
-
-#aaabbcaddcxx -> 3a2b1c1a2d1c2x
 
 def count_letters(string)
     grouped = []  # Instead of a hash, use an array to store pairs of character and count
